@@ -40,6 +40,7 @@ $twidth = $sett['table']['twidth'];
 $theight = $sett['table']['theight'];
 $addheight = $sett['table']['uheight'];
 $label = $sett['label'];
+$form = $sett['form'];
 $sett['table']['image'] = $img;
     /*
         prepare template
@@ -193,7 +194,7 @@ $(function(){
 <section class="container">
 
 <div class="page-header">
-  <h2>Kreator stopki <span class="badge"><?=$sett['version']?></span> <small> * wprowadź dane i skopiuj kod/obraz *</small></h2>
+  <h2><?=$form['header']?><span class="badge"><?=$sett['version']?></span><small><?=$form['headersml']?></small></h2>
 </div>
 
 <div  id="tinput">
@@ -214,8 +215,8 @@ $(function(){
 <div class="preview">
 <div class="container">
 <section>
-<button type="button" class="btn-primary btn-lg btn" name="copyto" access="false" style="default" id="copyto">Kopiuj HTML</button>&nbsp;
-<button type="button" class="btn-success btn-lg btn" name="makeimg" access="false" style="default" id="makeimg">Pobierz obraz</button>
+<button type="button" class="btn-primary btn-lg btn" name="copyto" access="false" style="default" id="copyto"><?=$form['btnhtml']?></button>&nbsp;
+<button type="button" class="btn-success btn-lg btn" name="makeimg" access="false" style="default" id="makeimg"><?=$form['btnimg']?></button>
 <hr />
 <p> </p>
 </section>
@@ -224,7 +225,7 @@ $(function(){
 /*
     Build template and put live plugs
 */
-$h = '<section id="htmllive"><p class="badge">Podgląd</p><div id="previewHtml">';
+$h = '<section id="htmllive"><p class="badge">'.$form['badgehtml'].'</p><div id="previewHtml">';
 foreach( $html as $k=>$v){
     if (strpos($k,'body')===false){
         $v = '<span class="'.$k.'">' . $v .'</span>';
@@ -233,7 +234,7 @@ foreach( $html as $k=>$v){
 }
 $h = $h . '</div></section>';
 echo $h;
-echo '<section id="previewImage"><p class="badge">Pobrany obraz</p><div>';
+echo '<section id="previewImage"><p class="badge">'.$form['badgeimg'].'</p><div>';
 echo '<a id="capturedlink" href="" download=""><img src="" id="captured" width="" height=""></img></a></div></section>';
 ?>
 </div></div>

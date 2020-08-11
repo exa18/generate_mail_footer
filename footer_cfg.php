@@ -1,6 +1,14 @@
 <?php
 return array(
     'version' => 'company',
+    'form' => array(
+        'header' => 'Generate Mail Footer ',
+        'headersml' => ' * enter data and copy code/image *',
+        'btnhtml' => 'Copy HTML',
+        'btnimg' => 'Get image',
+        'badgehtml' => 'Preview',
+        'badgeimg' => 'Downloaded image',
+    ),
     'table' => array(
         'twidth' => 600,
         'theight' => 100,
