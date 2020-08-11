@@ -12,9 +12,16 @@ Config file is filled with demo data. Pay attention to the field names.
   
   Section **html**.  This strict inside body html code. Look for {name} to repleace.
   
-  Section **form**.  Those are form field names.
-  
-  
+  Section **form**.  Those are form field names. Polish localization set:
+  ```
+        'header' => 'Kreator stopki ',
+        'headersml' => ' * wprowadź dane i skopiuj kod/obraz *',
+        'btnhtml' => 'Kopiuj HTML',
+        'btnimg' => 'Pobierz obraz',
+        'badgehtml' => 'Podgląd',
+        'badgeimg' => 'Pobrany obraz',
+   ```
+
 ### Form
 Form is generated from section **html** for field not starting with 'body' and input fields have labels from section **label**. 
 Form have validation for fields: name, phone. For field name is word capitalization. 
