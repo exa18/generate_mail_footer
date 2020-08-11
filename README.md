@@ -16,3 +16,17 @@ Config file is filled with demo data. Pay attention to the field names.
 Form is generated from section **html** for field not starting with 'body' and input fields have labels from section **label**. 
 Form have validation for fields: name, phone. For field name is word capitalization. 
 For field phone are: 0523445566 to 52 344 55 66 and mobile 555666777 to 555 666 777.
+
+### Password
+You can protect access to script by modify .htaccess file like so:
+```
+<IfModule mod_auth.c>
+ <Files "footer.php">
+ AuthName "Members Only"
+ AuthUserFile /home/user/domainpath/public_html/.htpasswd
+ Require valid-user
+ AuthType Basic
+ </Files>
+</IfModule>
+```
+And you need to create file .htpasswd with access [APACHE - Password formats](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html).
