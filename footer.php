@@ -1,7 +1,7 @@
 <?php
 /*
     *
-    GENERATE MAIL FOOTER 1.0
+    GENERATE MAIL FOOTER 1.1
     code by Julian Cenkier
     # http://cenkier.h2g.pl/julian
     *
